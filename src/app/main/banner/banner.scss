@@ -1,0 +1,32 @@
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+  //   align-items: center;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(
+    180deg,
+    rgba(143, 170, 220, 1) 0%,
+    rgba(129, 144, 157, 1) 15%,
+    rgba(26, 78, 120, 1) 56%,
+    rgba(22, 57, 83, 1) 69%,
+    rgba(16, 42, 60, 1) 86%,
+    rgba(10, 33, 51, 1) 94%,
+    rgba(9, 30, 51, 1) 100%
+  );
+  position: relative; /* Contained within the parent */
+}
+
+.banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 600px;
+}
+
+.stencil-bg{
+    z-index:1;
+    position: absolute;
+    filter: drop-shadow(2px 9px 6px black);
+}

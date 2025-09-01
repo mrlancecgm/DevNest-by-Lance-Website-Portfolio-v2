@@ -1,0 +1,71 @@
+<div class="about-me-wrapper">
+  <div
+    class="col-12 d-flex justify-content-center align-items-center flex-column position-relative"
+  >
+    <img id="lance-img" [src]="lanceCollage" />
+    <div
+      class="who-am-i display-5 d-flex justify-content-center position-absolute"
+    >
+      <span class="extra-bold" style="color: #fff">WHO</span>
+      <span class="extra-bold" style="color: #3b8996">AM</span>
+      <span class="extra-bold" style="color: #fff">I</span>
+    </div>
+  </div>
+  <div class="my-info d-flex justify-content-center align-items-center align-self-center">
+    <p>
+      I am Lance Chester Garcia Malaluan, a graduate with a Bachelor of Science in Computer
+      Engineering from Batangas State University - The National Engineering University. I am a
+      24-year-old Filipino full-stack software engineer with a deep passion for software
+      development. Software development is not just a profession for me; it's something I genuinely
+      enjoy and love to immerse myself in. I specialize in back-end development using C# and
+      ASP.NET, and front-end development with the Angular framework. Beyond web development, I also
+      build desktop applications using Angular and Electron. Additionally, I'm actively working on
+      Android mobile applications using the Ionic Framework, where I continue to leverage my Angular
+      expertise.
+    </p>
+  </div>
+  <div>
+    <div class="display-5 d-flex justify-content-center" style="font-weight: 900" >
+      <span class="extra-bold" style="color: #3b8996">LANGUAGES</span>
+      <span class="extra-bold" style="color: #fff">&</span>
+      <span class="extra-bold" style="color: #3b8996">FRAMEWORKS</span>
+    </div>
+    <div class="d-flex justify-content-center mt-2 logo-img-wrapper" id="work-section">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-around px-0 mt-1 mb-1">
+            <img class="logo-img type1" [src]="angularLogo" />
+            <img
+              class="logo-img"
+              [src]="typeScriptLogo"
+              (mouseover)="highlightLogo('typescript')"
+              (mouseleave)="unhighlightLogo('typescript')"
+            />
+            <img
+              class="logo-img"
+              [src]="htmlLogo"
+              (mouseover)="highlightLogo('html')"
+              (mouseleave)="unhighlightLogo('html')"
+            />
+            <img
+              class="logo-img"
+              [src]="cssLogo"
+              (mouseover)="highlightLogo('css')"
+              (mouseleave)="unhighlightLogo('css')"
+            />
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-around px-0 mt-1 mb-1">
+            <img
+              class="logo-img"
+              [src]="javaScriptLogo"
+              (mouseover)="highlightLogo('javascript')"
+              (mouseleave)="unhighlightLogo('javascript')"
+            />
+            <img class="logo-img type1" [src]="ionicLogo" />
+            <img class="logo-img type1" [src]="aspNetLogo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

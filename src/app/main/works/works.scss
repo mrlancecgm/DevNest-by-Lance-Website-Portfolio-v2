@@ -1,0 +1,101 @@
+.works-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  background: #091e33;
+  color: #fff;
+  padding: 20px 50px;
+}
+
+#angle-color-1 {
+  animation: colored-angle-1 2s ease infinite;
+}
+
+#angle-color-2 {
+  animation: colored-angle-2 2s ease infinite;
+}
+
+#angle-color-3 {
+  animation: colored-angle-3 2s ease infinite;
+}
+
+@keyframes colored-angle-1 {
+  25% {
+    color: #ffffff;
+  }
+  50% {
+    color: #8598b1;
+  }
+  100% {
+    color: #3b8996;
+  }
+}
+
+@keyframes colored-angle-2 {
+  25% {
+    color: #3b8996;
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: #8598b1;
+  }
+}
+
+@keyframes colored-angle-3 {
+  25% {
+    color: #8598b1;
+  }
+  50% {
+    color: #3b8996;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+#devnest-icon {
+  height: 3rem;
+}
+
+.work-card-wrapper {
+    width: 80%;
+}
+
+.work-card {
+  aspect-ratio: 16/9;
+  background: #1e5019;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #fff, #8598b1, #3b8996, #091e33);
+  background-size: 400% 400%;
+  animation: gradient-animation 5s ease infinite;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 1px #fff;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

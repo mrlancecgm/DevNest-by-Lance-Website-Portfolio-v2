@@ -1,0 +1,72 @@
+.about-me-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  background: #091e33;
+  color: #fff;
+  padding: 20px 50px;
+}
+
+#lance-img {
+  width: 714px;
+}
+
+@media screen and (max-width: 715px) {
+  #lance-img {
+    width: clamp(320px, 100vw, 714px);
+  }
+}
+
+.who-am-i {
+  font-weight: 900;
+  bottom: 0px;
+}
+
+.my-info {
+  width: 80%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo-img {
+  height: 80px;
+  // cursor: pointer;
+  &.type1 {
+    filter: brightness(0) invert(1);
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.logo-img-wrapper {
+  width: 60%;
+  justify-self: center;
+}
+
+@media screen and (max-width: 700px) {
+  .logo-img-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo-img-wrapper {
+    width: 100%;
+  }
+  .logo-img {
+    height: clamp(60px, 5vw, 70px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .my-info {
+    width: 100%;
+  }
+
+  .who-am-i {
+    bottom:-15px;
+  }
+}

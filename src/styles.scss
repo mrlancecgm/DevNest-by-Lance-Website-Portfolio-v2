@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+@use '../src/shared/styles/text-styles.scss';
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #091e33;
+  overflow-x: hidden;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+app-subheader {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    z-index: 3;
+}
+
+app-header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 3;
+}
+
+@font-face {
+    font-family: 'Montesarrat';
+    src: url('./assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montesarrat-ExtraBold';
+    src: url('./assets/fonts/Montserrat-ExtraBold.ttf');
+}
+
+*{
+    font-family: 'Montesarrat';
+}
+
+.extra-bold{
+    font-family: 'Montesarrat-ExtraBold';
+}
+
+.content-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%; 
+  display: flex;
+  justify-content: center; /* Center the content */
+  flex-direction: column;
+}
+
+app-banner, app-about-me {
+  max-width: 100%; 
+  box-sizing: border-box;
+}
