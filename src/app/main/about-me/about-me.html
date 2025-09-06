@@ -34,20 +34,23 @@
       <div class="col-12">
         <div class="row">
           <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-around px-0 mt-1 mb-1">
-            <img class="logo-img type1" [src]="angularLogo" />
+            <img class="logo-img type1" [src]="angularLogo" title="Angular"/>
             <img
+              title="Typescript"
               class="logo-img"
               [src]="typeScriptLogo"
               (mouseover)="highlightLogo('typescript')"
               (mouseleave)="unhighlightLogo('typescript')"
             />
             <img
+              title="HTML"
               class="logo-img"
               [src]="htmlLogo"
               (mouseover)="highlightLogo('html')"
               (mouseleave)="unhighlightLogo('html')"
             />
             <img
+              title="CSS"
               class="logo-img"
               [src]="cssLogo"
               (mouseover)="highlightLogo('css')"
@@ -56,13 +59,14 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-around px-0 mt-1 mb-1">
             <img
+              title="JavaScript"
               class="logo-img"
               [src]="javaScriptLogo"
               (mouseover)="highlightLogo('javascript')"
               (mouseleave)="unhighlightLogo('javascript')"
             />
-            <img class="logo-img type1" [src]="ionicLogo" />
-            <img class="logo-img type1" [src]="aspNetLogo" />
+            <img title="Ionic" class="logo-img type1" [src]="ionicLogo" />
+            <img title="ASP.NET" class="logo-img type1" [src]="aspNetLogo" />
           </div>
         </div>
       </div>

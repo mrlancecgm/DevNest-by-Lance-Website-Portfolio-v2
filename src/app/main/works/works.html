@@ -1,4 +1,4 @@
-<div class="works-wrapper pt-0">
+<div class="works-wrapper p-0">
   <div class="display-5 d-flex justify-content-center mb-3" style="font-weight: 900">
     <span class="extra-bold d-flex justify-content-center align-items-center" id="angle-color-3">{{
       openingAngle
@@ -27,73 +27,66 @@
       closingAngle
     }}</span>
   </div>
-  <div
-    class="work-card-wrapper d-flex justify-content-center align-items-center align-self-center"
-    [style.width]="'80%'"
-  >
-    <div class="col-12 d-flex justify-content-center align-items-center">
-      <div class="row w-100 d-flex justify-content-evenly">
-        <div
-          class="work-card col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
-        >
-          <div
-            class="d-flex justify-content-center align-items-center position-absolute"
-            style="aspect-ratio: 16/9; width: 96%; background: #fff; border-radius: 20px"
-          ></div>
-        </div>
-        <div
-          class="work-card col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
-        >
-          <div
-            class="d-flex justify-content-center align-items-center position-absolute"
-            style="aspect-ratio: 16/9; width: 96%; background: #fff; border-radius: 20px"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="work-card-wrapper d-flex justify-content-center align-items-center align-self-center">
-    <div class="col-12 d-flex justify-content-center align-items-center">
-      <div class="row w-100 d-flex justify-content-evenly">
-        <div
-          class="work-card col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
-        >
-          <div
-            class="d-flex justify-content-center align-items-center position-absolute"
-            style="aspect-ratio: 16/9; width: 96%; background: #fff; border-radius: 20px"
-          ></div>
-        </div>
-        <div
-          class="work-card col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
-        >
-          <div
-            class="d-flex justify-content-center align-items-center position-absolute"
-            style="aspect-ratio: 16/9; width: 96%; background: #fff; border-radius: 20px"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="work-card-wrapper d-flex justify-content-center align-items-center align-self-center">
-    <div class="col-12 d-flex justify-content-center align-items-center">
-      <div class="row w-100 d-flex justify-content-evenly">
-        <div
-          class="work-card col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
-        >
-          <div
-            class="d-flex justify-content-center align-items-center position-absolute"
-            style="aspect-ratio: 16/9; width: 96%; background: #fff; border-radius: 20px"
-          ></div>
-        </div>
-        <div
-          class="work-card col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
-        >
-          <div
-            class="d-flex justify-content-center align-items-center position-absolute"
-            style="aspect-ratio: 16/9; width: 96%; background: #fff; border-radius: 20px"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <ng-container
+    *ngTemplateOutlet="
+      workCardWrapper;
+      context: {
+        type: 'desktop-web',
+        thumbnail1: work_thumbnails['mms'],
+        thumbnail2: work_thumbnails['rainbowRumble'],
+        thumbnail3: work_thumbnails['jsonTools']
+      }
+    "
+  ></ng-container>
+  <ng-container
+    *ngTemplateOutlet="
+      workCardWrapper;
+      context: {
+        type: 'mobile',
+        thumbnail1: work_thumbnails['eCollect'],
+        thumbnail2: work_thumbnails['memberInfoUpdateApp'],
+        thumbnail3: work_thumbnails['dimensio']
+      }
+    "
+  ></ng-container>
 </div>
+
+<ng-template
+  #workCardWrapper
+  let-type="type"
+  let-thumbnail1="thumbnail1"
+  let-thumbnail2="thumbnail2"
+  let-thumbnail3="thumbnail3"
+>
+  <div class="work-card-wrapper d-flex justify-content-center align-items-center align-self-center">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <div class="row w-100 d-flex justify-content-evenly">
+        <ng-container
+          *ngTemplateOutlet="workCard; context: { thumbnail: thumbnail1, type: type }"
+        ></ng-container>
+        <ng-container
+          *ngTemplateOutlet="workCard; context: { thumbnail: thumbnail2, type: type }"
+        ></ng-container>
+        <ng-container
+          *ngTemplateOutlet="workCard; context: { thumbnail: thumbnail3, type: type }"
+        ></ng-container>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #workCard let-thumbnail="thumbnail" let-type="type">
+  <div
+    class="work-card col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center align-items-center position-relative"
+    [ngStyle]="{ 'aspect-ratio': type == 'mobile' ? 4/9 : 4/3 }"
+  >
+    <div
+      class="d-flex justify-content-center align-items-center position-absolute"
+      [ngStyle]="{ 'aspect-ratio': type == 'mobile' ? 4/9 : 4/3 }"
+      style="width: 96%; background: #fff; border-radius: 20px"
+    >
+      <img [src]="thumbnail" class="h-100" [style.border-radius]="'20px'" />
+    </div>
+  </div>
+</ng-template>

@@ -16,7 +16,7 @@ export class AboutMe {
   public aspNetLogo: string = 'assets/logos/aspnet-logo.png';
   public htmlLogo: string = 'assets/logos/html5-logo-white.png';
   public cssLogo: string = 'assets/logos/css3-logo-white.png';
-  public javaScriptLogo: string = 'assets/logos/js-logo-white.png';
+  public javaScriptLogo: string = 'assets/logos/js-logo-white.png';  
 
   highlightLogo(key: string) {
     if (key == 'typescript') {

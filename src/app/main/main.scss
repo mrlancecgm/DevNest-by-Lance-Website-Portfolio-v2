@@ -23,6 +23,12 @@
     }    
 }
 
+@media screen and (width:768px) {
+    .tagline-content{
+        font-size: 28px !important;
+    }
+}
+
 @media screen and (max-width:768px) {
     .tagline-content{
         font-size: clamp(15px,5vw,36px);

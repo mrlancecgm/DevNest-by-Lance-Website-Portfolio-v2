@@ -11,6 +11,14 @@ import * as feather from 'feather-icons';
 export class Works {
   public openingAngle: string = '<';
   public closingAngle: string = '>';
+  public work_thumbnails: any = {
+    mms: "assets/images/my-works/mms.png",
+    rainbowRumble: "assets/images/my-works/rainbow-rumble.png",
+    jsonTools: "assets/images/my-works/json-tools.png",
+    eCollect: "assets/images/my-works/e-collect.png",
+    memberInfoUpdateApp: "assets/images/my-works/member-info-update-app.png",
+    dimensio: "assets/images/my-works/dimensio.png",
+  }
 
   setStyleProperties() {
     setTimeout(() => {
